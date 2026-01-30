@@ -8,11 +8,14 @@ class Sector:
         return self.__stock_actual
     # Setter?
     def vender_entrada(self, cantidad):
-        if cantidad < self.__stock_actual:
+        if 0 < cantidad <= self.__stock_actual:
             self.__stock_actual -= cantidad
             return True
         else:
+            print(f"¡Error! No hay suficiente stock en {self.sector}.")
             return False
     #getters
     def __str__(self):
-        return f"Sector: {self.sector} | Precio: {self.precio_base} | Ticket Disponibles: {self.__stock_actual}"
+        return f"Sector: {self.sector} |"\
+               f"Precio: ${self.precio_base} |"\
+               f"Ticket Disponibles: {self.__stock_actual}"
