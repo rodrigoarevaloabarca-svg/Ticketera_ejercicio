@@ -12,10 +12,10 @@ class Sector:
             self.__stock_actual -= cantidad
             return True
         else:
-            print(f"¡Error! No hay suficiente stock en {self.sector}.")
+            print(f"❌¡Error! No hay suficiente stock en {self.sector}.")
             return False
     #getters
     def __str__(self):
-        return f"Sector: {self.sector} |"\
-               f"Precio: ${self.precio_base} |"\
-               f"Ticket Disponibles: {self.__stock_actual}"
+        return f"📍Sector: {self.sector} |"\
+               f"💵Precio: ${self.precio_base} |"\
+               f"🎫Ticket Disponibles: {self.__stock_actual}"

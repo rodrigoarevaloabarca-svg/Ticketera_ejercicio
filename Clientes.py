@@ -6,7 +6,6 @@ class Validador:
 
     @staticmethod
     def validar_rut(rut):
-        # 1. Limpieza y formato (lo que ya vimos)
         rut = rut.upper().replace(".", "").replace("-", "")
         if not re.match(r"^\d{7,8}[0-9K]$", rut):
             return False

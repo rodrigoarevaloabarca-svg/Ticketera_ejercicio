@@ -8,16 +8,16 @@ class Evento:
 
     def agregar_sector(self, sector):
         self.lista_sectores.append(sector)
-        print(f"Sector {sector.sector} agregado correctamente")
+        print(f"✅Sector {sector.sector} agregado correctamente")
 
     @classmethod
     def cambiar_tasa(cls, tasa):
         cls.tasa_servicio = tasa
-        print(f"Tasa de servicio cambiada a {cls.tasa_servicio}")
+        print(f"✅Tasa de servicio cambiada a {cls.tasa_servicio}")
 
     def mostrar_disponibilidad(self):
         if not self.lista_sectores:
-            print("No hay sectores registrados aun")
+            print("❌No hay sectores registrados aun")
             return
         for sector in self.lista_sectores:
             print(sector)

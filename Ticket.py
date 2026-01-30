@@ -2,10 +2,11 @@ import secrets
 import string
 
 class Ticket:
-    def __init__(self, nombre_comprador, rut, sector):
+    def __init__(self, nombre_comprador, rut, sector,cant_entradas):
         self.nombre_comprador = nombre_comprador
         self.rut = rut
         self.sector = sector
+        self.cant_entradas = cant_entradas
         self.__token = self.__generar_token_seguridad()#composicion
 
     def __generar_token_seguridad(self):
@@ -19,12 +20,16 @@ class Ticket:
 
     def __str__(self):
         return (
-            f"\n{'=' * 30}\n"
-            f"TICKET OFICIAL-MEGACONCIERTOS\n"
-            f"{'-' * 30}\n"
-            f"Cliente: {self.nombre_comprador}\n"
-            f"RUT:     {self.rut}\n"
-            f"Sector:  {self.sector}\n"
-            f"Token:   {self.__token}\n"
-            f"{'=' * 30}"
+
+            f" 🎫  **TICKET DIGITAL** 🎫 \n"
+            f"  *MEGACONCIERTOS OFICIAL* \n"
+            f"{'─' * 35}\n"
+            f" 👤 **CLIENTE:** {self.nombre_comprador}\n"
+            f" 🆔 **RUT:** {self.rut}\n"
+            f" 📍 **SECTOR:** {self.sector}\n"
+            f" 🎫 **CANT. ENTRADAS:** {self.cant_entradas}\n"
+            f" 🔑 **CODIGO:** {self.__token}\n"
+            f"{'─' * 35}\n"
+            f"      ¡Disfruta el show! 🎸\n"
+
         )
