@@ -27,7 +27,7 @@ def principal():
         match opcion:
             case "1":
                 print("\n--- 🛠️ CONFIGURACIÓN DE SECTOR ---")
-                nombre_sector = input("📍 Nombre del sector: ")
+                nombre_sector = input("📍 Nombre del sector: ").upper()
                 precio = int(input("💵 Precio base: "))
                 stock = int(input("📦 Stock inicial: "))
                 nuevo_sector = Sector(nombre_sector, precio, stock)
