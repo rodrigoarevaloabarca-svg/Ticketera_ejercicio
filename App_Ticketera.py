@@ -51,7 +51,7 @@ def principal():
                     continue
 
                 print("\n📍 Sectores Disponibles:")
-                for i, s in enumerate(evento_actual.lista_sectores):
+                for i, s in enumerate(evento_actual.lista_sectores, start=1):
                     print(f"   [{i}] {s.sector} - ${s.precio_base:,.0f}")
 
                 try:
